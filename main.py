@@ -7,6 +7,7 @@
 
 import qrcode
 import sys
+import os
 from PIL import Image
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
@@ -102,10 +103,12 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-
+        
     def retranslateUi(self, Form):
+        username = os.getlogin()
+        # build = 'HTMLDigger'
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "QrCode"))
+        Form.setWindowTitle(_translate("Form", "QrCode v1.0.5 using by ({x})").format(x=username))
         self.QrCode.setText(_translate("Form", ""))
         self.pushButton_generate.setText(_translate("Form", "Generate"))
 
@@ -123,3 +126,4 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
+

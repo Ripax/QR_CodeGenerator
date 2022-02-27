@@ -1,3 +1,10 @@
+# File name : QR_CodeGenerator
+# Author : HTMLDigger
+# Date : Fab 27th 2022
+# ## ############################################
+#    Main Script.
+# ## ############################################
+
 import qrcode
 import sys
 from PIL import Image
